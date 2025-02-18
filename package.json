@@ -1,7 +1,7 @@
 {
   "name": "karin-plugin-template-ts",
   "version": "1.0.0",
-  "author": "Lain",
+  "author": "shijin",
   "type": "module",
   "description": "karin plugin template",
   "homepage": "https://github.com/KarinJS/karin-plugin-template-ts",
@@ -14,19 +14,22 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-    "pub": "npm publish --access public"
+    "pub": "npm publish --access public",
+    "dev": "tsx watch --include \"src/**/*.ts\" src/index.ts",
+    "karin": "karin"
   },
   "main": "lib/index.js",
   "devDependencies": {
-    "@types/node": "^20.17.8",
-    "eslint": "^9.7.0",
+    "@types/node": "^20.17.19",
+    "eslint": "^9.20.1",
     "neostandard": "^0.11.9",
-    "node-karin": "0.12.25-beta.pr.194.1-1732881372",
+    "node-karin": "latest",
     "tsc-alias": "^1.8.10",
     "tsx": "^4.19.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.7.3"
   },
   "karin": {
+    "main": "src/index.ts",
     "apps": [
       "lib/apps"
     ],
